@@ -1,0 +1,72 @@
+.skills:hover {
+  transition: 0.4s;
+  opacity: 1;
+}
+.skills {
+  opacity: 0.7;
+}
+.container:hover > div > .outer_casing {
+  animation: shake 0.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation-duration: 0.3s;
+  /* animation-delay: 0.5s; */
+}
+.outer_casing {
+  border: 1px solid rgba(252, 153, 72, 0.678);
+  box-shadow: 0px 1px 1px rgb(127, 88, 17);
+}
+
+.container:hover > div > div > .child {
+  transition-duration: 0.5s;
+  transform: scale(0.2) translate(-20px, -20px);
+  animation: meteor_shower 0.5s ease-in forwards;
+  /* animation-delay: calc(0.2s * var(--index)); */
+}
+
+.child {
+  opacity: 1;
+  box-shadow: inset 0 0 5px #fff, inset 2px 0 8px rgb(255, 153, 0),
+    inset -2px 0 8px rgb(255, 122, 74), inset 2px 0 3px rgb(255, 77, 0),
+    inset -2px 0 3px rgb(255, 0, 0), 0 0 5px #ff8811,
+    -1px 0 8px rgb(255, 124, 72), 1px 0 2px rgb(255, 255, 8);
+}
+
+@keyframes meteor_shower {
+  0% {
+    transform: scale(0.2) translate(-30px, -30px);
+  }
+  100% {
+    transform: scale(1) translate(0px, 0px);
+    box-shadow: inset 0 0 5px #fff, inset 2px 0 8px rgb(255, 153, 0),
+      inset -2px 0 8px rgb(255, 122, 74), inset 2px 0 3px rgb(255, 77, 0),
+      inset -2px 0 3px rgb(255, 0, 0), 0 0 5px #ff8811,
+      -1px 0 8px rgb(255, 124, 72), 1px 0 2px rgb(255, 255, 8);
+  }
+}
+
+@keyframes shake {
+  0% {
+    border: 1px solid;
+    box-shadow: none;
+  }
+  10%,
+  90% {
+    border: 1px solid rgba(252, 153, 72, 0.678);
+    box-shadow: 0px 1px 1px rgb(127, 88, 17);
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}

@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+#hero_text {
+  background: -webkit-linear-gradient(45deg, rgb(255, 81, 0), rgb(234, 255, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.childrens {
+  background: linear-gradient(rgba(255, 185, 81, 0.719), transparent);
+  background-attachment: fixed;
+}
